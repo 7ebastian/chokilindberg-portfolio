@@ -70,7 +70,9 @@ export function parseProjects(pages: Page[]): ProjectData[] {
 
     // Get project images from individual project page
     const projectImages =
-      projectPage?.images || [thumbnailImage].filter(Boolean);
+      projectPage && projectPage.images.length > 0
+        ? projectPage.images
+        : [thumbnailImage].filter(Boolean);
 
     // Extract description from project page
     const description = projectPage?.content[0]?.content
