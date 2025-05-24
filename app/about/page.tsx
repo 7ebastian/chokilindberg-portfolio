@@ -1,4 +1,5 @@
 import { getAboutPage } from "@/lib/content";
+import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -70,7 +71,8 @@ export default function AboutPage() {
           {keyQuote && (
             <blockquote className="my-12 py-8 px-8 bg-gray-50 border-l-4 border-black">
               <p className="text-xl md:text-2xl font-light leading-relaxed text-center italic">
-                "{keyQuote.replace(/^"|"$/g, "").replace(/\.$/, "")}"
+                &ldquo;{keyQuote.replace(/^"|"$/g, "").replace(/\.$/, "")}
+                &rdquo;
               </p>
               <footer className="text-center mt-4">
                 <cite className="text-sm font-light tracking-wider uppercase text-gray-600">
@@ -137,18 +139,18 @@ export default function AboutPage() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <a
+            <Link
               href="/work"
               className="px-8 py-3 bg-black text-white font-light tracking-wider uppercase text-sm hover:bg-gray-800 transition-all duration-300"
             >
               View Portfolio
-            </a>
-            <a
+            </Link>
+            <Link
               href="/news"
               className="px-8 py-3 border border-black text-black font-light tracking-wider uppercase text-sm hover:bg-black hover:text-white transition-all duration-300"
             >
               Exhibitions & Press
-            </a>
+            </Link>
           </div>
         </div>
       </section>

@@ -4,7 +4,6 @@ import {
   NavigationItem,
   SiteContent,
   ExhibitionItem,
-  PressItem,
 } from "./types";
 import siteContentData from "../content/site-content.json";
 
@@ -25,7 +24,7 @@ export function parseProjectTitle(text: string): {
   const yearMatch = text.match(/(\d{4})/);
   const year = yearMatch ? yearMatch[1] : "";
 
-  let title = text
+  const title = text
     .replace(/\d{4}/g, "") // Remove year
     .replace(/\([^)]*\)/g, "") // Remove parenthetical content
     .trim();

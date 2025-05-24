@@ -10,6 +10,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://chokilindberg.com"),
   title: "Choki Lindberg — Photography Portfolio",
   description:
     "Meticulously crafted small-scale photographic sets that explore themes of memory, reality vs. artifice, and intimate interior spaces.",
