@@ -1,5 +1,9 @@
 ---
-description:
+description: "Core development standards for TypeScript, React, and Next.js App Router patterns specific to portfolio sites" 
 globs:
+  - "app/**/*.tsx"
+  - "components/**/*.tsx"
+  - "lib/**/*.ts" 
 alwaysApply: false
+---
 ---

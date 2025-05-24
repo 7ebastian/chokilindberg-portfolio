@@ -1,5 +1,7 @@
 ---
-description:
+description: "TypeScript coding standards and patterns for portfolio development"
 globs:
+  - "**/*.ts"
+  - "**/*.tsx"
 alwaysApply: false
 ---

@@ -1,5 +1,8 @@
 ---
-description:
+description: "Styling and CSS standards using Tailwind CSS for responsive portfolio design"
 globs:
+  - "**/*.css"
+  - "**/*.tsx"
+  - "tailwind.config.*"
 alwaysApply: false
 ---

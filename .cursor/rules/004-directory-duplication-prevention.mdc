@@ -1,5 +1,5 @@
 ---
-description:
+description: "Critical rules to prevent duplicate directory creation and maintain single source of truth"
 globs:
 alwaysApply: false
 ---

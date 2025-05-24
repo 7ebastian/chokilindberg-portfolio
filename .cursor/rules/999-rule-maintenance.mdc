@@ -1,5 +1,5 @@
 ---
-description:
+description: "Guidelines for maintaining and improving project rules over time"
 globs:
 alwaysApply: false
 ---

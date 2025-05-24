@@ -1,5 +1,5 @@
 ---
-description:
+description: "Performance optimization guidelines for portfolio sites including image optimization and loading strategies"
 globs:
 alwaysApply: false
 ---
