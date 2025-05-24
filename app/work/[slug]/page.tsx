@@ -5,9 +5,9 @@ import { getProjectBySlug, getAllProjects } from "@/lib/content";
 import type { Metadata } from "next";
 
 interface ProjectPageProps {
-  params: Promise<{
+  params: {
     slug: string;
-  }>;
+  };
 }
 
 // Generate static params for all project pages
@@ -23,7 +23,7 @@ export async function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: ProjectPageProps): Promise<Metadata> {
-  const { slug } = await params;
+  const { slug } = params;
   const project = getProjectBySlug(slug);
 
   if (!project) {
@@ -58,7 +58,7 @@ export async function generateMetadata({
 }
 
 export default async function ProjectPage({ params }: ProjectPageProps) {
-  const { slug } = await params;
+  const { slug } = params;
   const project = getProjectBySlug(slug);
 
   if (!project) {
