@@ -74,7 +74,7 @@ export default function HomePage() {
               artifice begins to unravel.
             </p>
             <p className="font-medium">
-              What we see, are in fact meticulously crafted small-scale sets.
+              What we see are in fact meticulously crafted small-scale sets.
             </p>
           </div>
 
