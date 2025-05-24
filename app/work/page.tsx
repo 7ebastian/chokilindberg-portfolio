@@ -31,7 +31,7 @@ export default function WorkPage() {
       {/* Projects Grid */}
       <section className="page-container">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
-          {projects.map((project) => (
+          {projects.map((project, index) => (
             <Link
               key={project.id}
               href={`/work/${project.slug}`}
@@ -50,8 +50,8 @@ export default function WorkPage() {
                     className="project-card-image object-cover"
                     sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     quality={80}
-                    priority={projects.indexOf(project) < 6}
-                    loading={projects.indexOf(project) < 6 ? "eager" : "lazy"}
+                    priority={index < 6}
+                    loading={index < 6 ? "eager" : "lazy"}
                     placeholder="blur"
                     blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R7+w6VdmotElSePOOdBt3JqBQ="
                   />
