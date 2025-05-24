@@ -1,101 +1,120 @@
 import Image from "next/image";
+import Link from "next/link";
+import { getHomePage } from "@/lib/content";
 
-export default function Home() {
+export default function HomePage() {
+  const homePage = getHomePage();
+
+  if (!homePage) {
+    return <div>Loading...</div>;
+  }
+
+  // Get the hero image (3_houses.jpg from scraped data)
+  const heroImage = homePage.images[0];
+
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+    <div className="min-h-screen">
+      {/* Hero Section */}
+      <section className="relative w-full h-[calc(100vh-5rem)]">
+        {heroImage && (
+          <>
             <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+              src={heroImage.localPath}
+              alt={heroImage.alt || "Choki Lindberg Photography"}
+              fill
+              className="object-cover object-center"
+              priority
+              sizes="100vw"
+              quality={95}
             />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+
+            {/* Overlay for better text readability */}
+            <div className="absolute inset-0 bg-black bg-opacity-20" />
+
+            {/* Hero Content */}
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="text-center text-white z-10">
+                <h1 className="text-4xl md:text-6xl font-light tracking-wider uppercase mb-4">
+                  Choki Lindberg
+                </h1>
+                <p className="text-lg md:text-xl font-light tracking-wide mb-8 max-w-2xl mx-auto px-4">
+                  Meticulously crafted small-scale photographic sets exploring
+                  memory, reality, and intimate spaces
+                </p>
+                <Link
+                  href="/work"
+                  className="inline-block px-8 py-3 border border-white text-white font-light tracking-wider uppercase text-sm hover:bg-white hover:text-black transition-all duration-300"
+                >
+                  View Work
+                </Link>
+              </div>
+            </div>
+          </>
+        )}
+      </section>
+
+      {/* Introduction Section */}
+      <section className="page-container">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-2xl md:text-3xl font-light tracking-wider uppercase mb-8">
+            About the Work
+          </h2>
+          <div className="text-body text-lg leading-relaxed space-y-6">
+            <p>
+              Choki Lindberg&apos;s photographs appear at first glance to depict
+              interiors, often in a state of decay, void of human presence. The
+              work is full of detail and fragmented stories.
+            </p>
+            <p>
+              However, once we stop to study the details, an odd dimension
+              surfaces. The proportions appear warped. Textures are exaggerated
+              and there&apos;s a clumsiness to the objects. And slowly the
+              artifice begins to unravel.
+            </p>
+            <p className="font-medium">
+              What we see, are in fact meticulously crafted small-scale sets.
+            </p>
+          </div>
+
+          <div className="mt-12 flex flex-col sm:flex-row gap-6 justify-center">
+            <Link
+              href="/about"
+              className="px-6 py-2 border border-black text-black font-light tracking-wider uppercase text-sm hover:bg-black hover:text-white transition-all duration-300"
+            >
+              Read More
+            </Link>
+            <Link
+              href="/work"
+              className="px-6 py-2 bg-black text-white font-light tracking-wider uppercase text-sm hover:bg-gray-800 transition-all duration-300"
+            >
+              Portfolio
+            </Link>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </section>
+
+      {/* Featured Projects Preview */}
+      <section className="page-container border-t border-gray-100 mt-16 pt-16">
+        <div className="text-center mb-12">
+          <h2 className="text-2xl md:text-3xl font-light tracking-wider uppercase">
+            Recent Work
+          </h2>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {/* We'll add featured project previews here */}
+          <div className="text-center">
+            <Link href="/work" className="block group">
+              <div className="aspect-photo bg-gray-100 mb-4 group-hover:opacity-90 transition-opacity">
+                {/* Preview thumbnails will be added */}
+              </div>
+              <h3 className="text-sm font-light tracking-wider uppercase">
+                View All Projects
+              </h3>
+            </Link>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
