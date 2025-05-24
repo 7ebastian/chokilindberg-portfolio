@@ -156,7 +156,7 @@ export default function ContactPage() {
                       Two Parts Impossible, One Part May Be
                     </p>
                     <p className="text-sm text-gray-600">
-                      Group exhibition, Galerie Bart, Amsterdam NL
+                      Group exhibition, Galerie Bart, Amsterdam, NL
                     </p>
                   </div>
                   <span className="text-sm font-light tracking-wide text-gray-500">
@@ -168,7 +168,7 @@ export default function ContactPage() {
                   <div>
                     <p className="text-body font-medium">KunstRAI</p>
                     <p className="text-sm text-gray-600">
-                      Group presentation, Galerie Bart, Amsterdam NL
+                      Group presentation, Galerie Bart, Amsterdam, NL
                     </p>
                   </div>
                   <span className="text-sm font-light tracking-wide text-gray-500">
@@ -182,7 +182,7 @@ export default function ContactPage() {
                       Preternatural Impacts
                     </p>
                     <p className="text-sm text-gray-600">
-                      Group exhibition, Arden Asbæk Gallery, Copenhagen DK
+                      Group exhibition, Arden Asbæk Gallery, Copenhagen, DK
                     </p>
                   </div>
                   <span className="text-sm font-light tracking-wide text-gray-500">
@@ -196,7 +196,7 @@ export default function ContactPage() {
                       The Great Photography Special
                     </p>
                     <p className="text-sm text-gray-600">
-                      Group exhibition, 11 Photographers, Galerie Bart Amsterdam
+                      Group exhibition, 11 Photographers, Galerie Bart Amsterdam,
                       NL
                     </p>
                   </div>
@@ -211,7 +211,7 @@ export default function ContactPage() {
                       BBA Photography Prize - Shortlisted
                     </p>
                     <p className="text-sm text-gray-600">
-                      1 of 4 artists, Berlin Blue Art Gallery, Berlin DE
+                      1 of 4 artists, Berlin Blue Art Gallery, Berlin, DE
                     </p>
                   </div>
                   <span className="text-sm font-light tracking-wide text-gray-500">
@@ -223,7 +223,7 @@ export default function ContactPage() {
                   <div>
                     <p className="text-body font-medium">Elsewhere</p>
                     <p className="text-sm text-gray-600">
-                      Solo exhibition, Galerie Bart Amsterdam NL
+                      Solo exhibition, Galerie Bart Amsterdam, NL
                     </p>
                   </div>
                   <span className="text-sm font-light tracking-wide text-gray-500">
@@ -235,7 +235,7 @@ export default function ContactPage() {
                   <div>
                     <p className="text-body font-medium">Carte Blanche</p>
                     <p className="text-sm text-gray-600">
-                      Group exhibition, Thottske Palais Copenhagen DK
+                      Group exhibition, Thottske Palais Copenhagen, DK
                     </p>
                   </div>
                   <span className="text-sm font-light tracking-wide text-gray-500">
@@ -249,7 +249,7 @@ export default function ContactPage() {
                       Interiors - Reconstructed Memories
                     </p>
                     <p className="text-sm text-gray-600">
-                      Gl. Mønt 25 Copenhagen DK
+                      Gl. Mønt 25 Copenhagen, DK
                     </p>
                   </div>
                   <span className="text-sm font-light tracking-wide text-gray-500">
@@ -283,7 +283,7 @@ export default function ContactPage() {
                   <div>
                     <p className="text-body font-medium">Boudoir</p>
                     <p className="text-sm text-gray-600">
-                      Commissioned work for private collector, Copenhagen DK
+                      Commissioned work for private collector, Copenhagen, DK
                     </p>
                   </div>
                   <span className="text-sm font-light tracking-wide text-gray-500">
@@ -315,7 +315,7 @@ export default function ContactPage() {
                   <div>
                     <p className="text-body font-medium">Kongens Fald</p>
                     <p className="text-sm text-gray-600">
-                      Theater props design, The Royal Danish Theater Copenhagen
+                      Theater props design, The Royal Danish Theater Copenhagen,
                       DK
                     </p>
                   </div>
@@ -328,7 +328,7 @@ export default function ContactPage() {
                   <div>
                     <p className="text-body font-medium">Porgy and Bess</p>
                     <p className="text-sm text-gray-600">
-                      Theater props design, The Royal Danish Opera Copenhagen DK
+                      Theater props design, The Royal Danish Opera Copenhagen, DK
                     </p>
                   </div>
                   <span className="text-sm font-light tracking-wide text-gray-500">
@@ -341,7 +341,7 @@ export default function ContactPage() {
                     <p className="text-body font-medium">Manhunt</p>
                     <p className="text-sm text-gray-600">
                       Hotel room installation, Overgaden Institut for
-                      Samtidskunst Copenhagen DK
+                      Samtidskunst Copenhagen, DK
                     </p>
                   </div>
                   <span className="text-sm font-light tracking-wide text-gray-500">
